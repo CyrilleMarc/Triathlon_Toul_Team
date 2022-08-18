@@ -27,6 +27,7 @@
     <div class="membres">
         <div id="membre">
             <form id="formulaire" method="post" action="index.php">
+                <h2>Créer un Compte<h2>
                 <h3>Pseudo</h3>
                 <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
@@ -73,9 +74,6 @@ try {
         background-color: transparent;
     }
 
-    h3{
-        color
-    }
     button {
         padding: 10px;
         border-radius: 10px;
@@ -94,9 +92,13 @@ try {
         font-family: 'Rubik Distressed', cursive;
         font-size: 3em;
     }
+
+    h2{
+        font-size: 25px;
+    }
     #Header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         background-color: yellow;
         width: 100%;
@@ -115,7 +117,7 @@ try {
     }
 
     input{
-        width: 150%;
+        width: 100%;
     }
 
     #formulaire{
@@ -123,6 +125,8 @@ try {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        background-color: yellow;
+        color: black;
     }
 </style>
 
