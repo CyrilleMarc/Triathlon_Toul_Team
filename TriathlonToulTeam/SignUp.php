@@ -18,16 +18,16 @@
         <div id="Title">
             <h1>Espace de connexion</h1>
         </div>
-        <script>
-        <button onclick="window.location.href = './index.php';">Retour</button></script>
+        <div>
+        <a href ="index.php"><button>Retour</button></a>;
 
 </header>
 
 <body>
     <div class="membres">
         <div id="membre">
-            <form method="post" action="index.php">
-                <h3>Nom athlète</h3>
+            <form id="formulaire" method="post" action="index.php">
+                <h3>Pseudo</h3>
                 <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
@@ -103,7 +103,14 @@ try {
     }
 
     input{
-        width: 40%;
+        width: 100%;
+    }
+
+    #formulaire{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 </style>
 
