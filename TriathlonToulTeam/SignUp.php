@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <title>Espace membres</title>
 </head>
-<header>
+<body>
+    <div id="container">
     <div id="Header">
         <div id="Logo">
             <img id="image" src="TTT.PNG">
@@ -20,10 +21,6 @@
         </div>
         <div>
         <a href ="index.php"><button>Accueil</button></a>;
-
-</header>
-
-<body>
     <div class="membres">
         <div id="membre">
             <form id="formulaire" method="post" action="index.php">
@@ -33,10 +30,11 @@
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
                 <button type="submit" value="envoyer">Valider</button>
-                <a href ="Login.php"><button>Se connecter</button></a>;
+                <a href ="Login.php"><button>Se connecter</button></a>
             </form>
         </div>
     </div>
+</div>
 </body>
 
 </html>
@@ -61,6 +59,15 @@ try {
         padding: 0;
         background-image: url("ashley-de-lotz-Vr3Xi8_2NgY-unsplash.jpg");
         background-size: cover;
+    }
+
+    #container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #Logo {

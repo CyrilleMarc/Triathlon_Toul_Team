@@ -35,7 +35,7 @@
             <a href="Competitions.html">
                 <li>Compétitions</li>
             </a>
-            <a href="https://espacetri.fftri.com" target="blank">
+            <a href="https://espacetri.fftri.com/users/license/account-registration#" target="blank">
                 <li>Prendre une licence</li>
             </a>
         </div>
