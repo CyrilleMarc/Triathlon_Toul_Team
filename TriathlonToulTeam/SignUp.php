@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <title>Espace membres</title>
 </head>
 <header>
-<div id="Header">
+    <div id="Header">
         <div id="Logo">
             <img src="TTT.PNG">
         </div>
@@ -17,6 +18,8 @@
         <div id="Title">
             <h1>Espace de connexion</h1>
         </div>
+        <script>
+        <button onclick="window.location.href = './index.php';">Retour</button></script>
 
 </header>
 
@@ -44,11 +47,12 @@ try {
             'Nom' => $_POST['Nom'],
             'Mdp' => $_POST['Mdp']
         ));
-    } 
+        echo 'Enregistrement effectué avec succès';
+    }
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-?> 
+?>
 <style>
     body {
         margin: 0%;
@@ -75,6 +79,32 @@ try {
         opacity: 0.7;
     }
 
+    #Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: yellow;
+        width: 100%;
+        height: 20vh;
+    }
+
+    #membre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Rubik Distressed', cursive;
+
+    }
+
+    button {
+        color: yellow;
+        background-color: black;
+        font-family: 'Rubik Distressed', cursive;
+    }
+
+    input{
+        width: 40%;
+    }
 </style>
 
 <body>
