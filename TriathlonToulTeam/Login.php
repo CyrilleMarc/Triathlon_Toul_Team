@@ -16,7 +16,7 @@
         </div>
 
         <div id="Title">
-            <h1>Espace de connexion</h1>
+            <h1>Connexion</h1>
         </div>
         <div>
         <a href ="index.php"><button>Accueil</button></a>;
@@ -33,6 +33,7 @@
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
                 <button type="submit" value="">Valider</button>
+                <a href ="SignUp.php"><button>Créer un compte</button></a>;
             </form>
         </div>
     </div>
