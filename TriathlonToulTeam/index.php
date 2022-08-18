@@ -23,7 +23,10 @@
 
         <div id="Navigation">
             <a href="SignUp.php">
-                <li>Espace membres</li>
+                <li>Créer un compte</li>
+            </a>
+            <a href="Login.php">
+                <li>Se connecter</li>
             </a>
             <a href="https://www.t2area.com/clubs/1-fftri-federation-francaise-de-triathlon/533-triathlon-toul-team.html#:~:text=Le%20club%20de%20Triathlon%20TRIATHLON,FFTRI%20%2D%20F%C3%A9d%C3%A9ration%20Fran%C3%A7aise%20de%20Triathlon."
                 target="blank">

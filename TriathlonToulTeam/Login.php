@@ -26,13 +26,13 @@
 <body>
     <div class="membres">
         <div id="membre">
-            <form id="formulaire" method="post" action="index.php">
-                <h2>Créer un Compte<h2>
+            <form id="formulaire" method="get" action="Login.php">
+                <h2>Se connecter<h2>
                 <h3>Pseudo</h3>
                 <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
-                <button type="submit" value="envoyer">Valider</button>
+                <button type="submit" value="">Valider</button>
             </form>
         </div>
     </div>
@@ -42,18 +42,19 @@
 <?php
 try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    if (isset($_POST['Nom']) && isset($_POST['Mdp'])) {
-        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
+    if (isset($_GET['Nom']) && isset($_GET['Mdp'])) {
+        $req = $bdd->prepare('SELECT * INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
         $req->execute(array(
-            'Nom' => $_POST['Nom'],
-            'Mdp' => $_POST['Mdp']
-        ));
+            'Nom' => $_GET['Nom'],
+            'Mdp' => $_GET['Mdp']
+        )); 
         echo 'Enregistrement effectué avec succès';
     }
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
 ?>
+
 <style>
     body {
         margin: 0%;
