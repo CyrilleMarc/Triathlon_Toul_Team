@@ -34,12 +34,12 @@
 </html>
 <?php
 try {
-    $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");;
+    $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_POST['Nom']) && isset($_POST['Mdp'])) {
         $req = $bdd->prepare('INSERT INTO membres (Nom, Mdp) VALUES(:Nom, :Mdp)');
         $req->execute(array(
-            'message' => $_POST['message'],
-            'signature' => $_POST['signature']
+            'Nom' => $_POST['Nom'],
+            'Mdp' => $_POST['Mdp']
         ));
     } 
 } catch (Exception $e) {
