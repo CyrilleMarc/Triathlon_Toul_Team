@@ -36,7 +36,7 @@
             </form>
         </div>
         <div id="membre">
-            <form id="formulaire" method="post" action="index.php">
+            <form id="formulaire" method="get" action="">
                 <h2>Se connecter<h2>
                 <h3>Pseudo</h3>
                 <input type="text" name="Nom" id="Nom"><br>
