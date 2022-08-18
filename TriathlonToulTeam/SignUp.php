@@ -61,6 +61,12 @@ try {
         background-size: cover;
     }
 
+    #Logo {
+        display: flex;
+        flex: 1;
+        padding: 15px;
+    }
+
     button {
         padding: 10px;
         border-radius: 10px;
