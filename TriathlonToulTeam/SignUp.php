@@ -9,32 +9,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <title>Espace membres</title>
 </head>
+
 <body>
     <div id="container">
-    <div id="Header">
-        <div id="Logo">
-            <img id="image" src="TTT.PNG">
+        <div id="Header">
+            <div id="Logo">
+                <img id="image" src="TTT.PNG">
+            </div>
+            <div id="Title">
+                <h1>Nouveau compte</h1>
+            </div>
+            <div>
+                <a href="index.php"><button>Accueil</button></a>;
+            </div>
         </div>
-
-        <div id="Title">
-            <h1>Nouveau compte</h1>
-        </div>
-        <div>
-        <a href ="index.php"><button>Accueil</button></a>;
-    <div class="membres">
-        <div id="membre">
-            <form id="formulaire" method="post" action="index.php">
-                <h2>Créer un Compte<h2>
-                <h3>Pseudo</h3>
-                <input type="text" name="Nom" id="Nom"><br>
-                <h3>Mot de passe</h3>
-                <input type="text" name="Mdp" id="Mdp"><br>
-                <button type="submit" value="envoyer">Valider</button>
-                <a href ="Login.php"><button>Se connecter</button></a>
-            </form>
+        <div class="membres">
+            <div id="membre">
+                <form id="formulaire" method="post" action="index.php">
+                    <h2>Créer un Compte<h2>
+                        <h3>Pseudo</h3>
+                        <input type="text" name="Nom" id="Nom"><br>
+                        <h3>Mot de passe</h3>
+                        <input type="text" name="Mdp" id="Mdp"><br>
+                        <button type="submit" value="envoyer">Valider</button>
+                        <a href="Login.php"><button>Se connecter</button></a>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
@@ -73,10 +75,10 @@ try {
     #Logo {
         display: flex;
         padding: 15px;
-       
+
     }
 
-    #image{
+    #image {
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -97,14 +99,15 @@ try {
         opacity: 0.7;
     }
 
-    h1{
+    h1 {
         font-family: 'Rubik Distressed', cursive;
         font-size: 3em;
     }
 
-    h2{
+    h2 {
         font-size: 25px;
     }
+
     #Header {
         display: flex;
         justify-content: space-between;
@@ -125,11 +128,11 @@ try {
 
     }
 
-    input{
+    input {
         width: 80%;
     }
 
-    #formulaire{
+    #formulaire {
         display: flex;
         flex-direction: column;
         align-items: center;
