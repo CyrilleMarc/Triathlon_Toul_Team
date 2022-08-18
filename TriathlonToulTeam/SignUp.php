@@ -122,7 +122,7 @@ try {
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
         color: white;
-        padding: 90px;
+        padding: 20px;
 
     }
 
