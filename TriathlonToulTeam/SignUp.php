@@ -12,7 +12,7 @@
 <header>
     <div id="Header">
         <div id="Logo">
-            <img src="TTT.PNG">
+            <img id="image" src="TTT.PNG">
         </div>
 
         <div id="Title">
@@ -28,6 +28,16 @@
         <div id="membre">
             <form id="formulaire" method="post" action="index.php">
                 <h2>Créer un Compte<h2>
+                <h3>Pseudo</h3>
+                <input type="text" name="Nom" id="Nom"><br>
+                <h3>Mot de passe</h3>
+                <input type="text" name="Mdp" id="Mdp"><br>
+                <button type="submit" value="envoyer">Valider</button>
+            </form>
+        </div>
+        <div id="membre">
+            <form id="formulaire" method="post" action="index.php">
+                <h2>Se connecter<h2>
                 <h3>Pseudo</h3>
                 <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
@@ -68,7 +78,7 @@ try {
        
     }
 
-    #logo img{
+    image{
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -128,8 +138,8 @@ try {
         background-color: yellow;
         color: black;
         width: 30%;
-        height: 15%;
-        border-radius: 20px;;
+        height: 20%;
+        border-radius: 20px;
     }
 </style>
 

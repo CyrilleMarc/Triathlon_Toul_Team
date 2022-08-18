@@ -52,7 +52,7 @@
     <div id="Natation">
         <img id="Photo-natation" src="jon-del-rivero-AjF5fv4-a2U-unsplash.jpg" alt="nageurs en eau libre">
         <div id="Natation-text">
-            <p>La première épreuve est une épreuve de natation en eaux libres. Bien que les entraînements se fassent
+            <p>La première épreuve est une épreuve de natation. Bien que les entraînements se fassent
                 généralement en piscine, les compétitions se déroulent en eau libre (mer, en lac ou étang, voire en
                 rivière). Le départ est effectué soit de manière groupée (Mass start), soit par vagues successives
                 déterminées par l'organisation ou encore depuis 2016, sur les compétitions longues distances
