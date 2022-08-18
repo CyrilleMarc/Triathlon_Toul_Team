@@ -19,7 +19,7 @@
             <h1>Espace de connexion</h1>
         </div>
         <div>
-        <a href ="index.php"><button>Retour</button></a>;
+        <a href ="index.php"><button>Accueil</button></a>;
 
 </header>
 
@@ -57,18 +57,16 @@ try {
     body {
         margin: 0%;
         padding: 0;
-        /* background-image: url("./message.jpg"); */
+        background-image: url("ashley-de-lotz-Vr3Xi8_2NgY-unsplash.jpg");
         background-size: cover;
     }
 
     button {
-        padding: 15px;
-        margin-top: 10px;
-        margin-left: 10px;
+        padding: 10px;
         border-radius: 10px;
         /* font-family: 'Mouse Memoirs', sans-serif;
         letter-spacing: .1em; */
-        font-size: 20px;
+        font-size: 15px;
         /* color: white; */
         /* background-color: #DFBB9D; */
         cursor: pointer;
@@ -79,9 +77,13 @@ try {
         opacity: 0.7;
     }
 
+    h1{
+        font-family: 'Rubik Distressed', cursive;
+        font-size: 3em;
+    }
     #Header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         background-color: yellow;
         width: 100%;
@@ -93,6 +95,7 @@ try {
         flex-direction: column;
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
+        padding: 60px;
 
     }
 
