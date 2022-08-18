@@ -20,9 +20,9 @@
 <body>
     <div class="message">
         <div id="message">
-            <form method="post" action="Membres.php">
+            <form method="post" action="index.php">
                 <h3>Nom athlète</h3>
-                <textarea type="text" name="message" id="message"></textarea><br>
+                <input type="text" name="message" id="message"><br>
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
                 <button type="submit" value="envoyer">Valider</button>
