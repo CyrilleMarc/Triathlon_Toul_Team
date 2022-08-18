@@ -68,7 +68,7 @@ try {
        
     }
 
-    image{
+    #image{
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -113,7 +113,7 @@ try {
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
         color: white;
-        padding: 20px;
+        padding: 120px;
 
     }
 

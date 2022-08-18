@@ -45,8 +45,6 @@ try {
     if (isset($_GET['Nom']) && isset($_GET['Mdp'])) {
         $req = $bdd->prepare('SELECT * INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
         $req->execute(array(
-            'Nom' => $_GET['Nom'],
-            'Mdp' => $_GET['Mdp']
         )); 
         echo 'Enregistrement effectué avec succès';
     }
@@ -69,7 +67,7 @@ try {
        
     }
 
-    image{
+    #image{
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -114,7 +112,8 @@ try {
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
         color: white;
-        padding: 20px;
+        padding: 120px;
+    
 
     }
 
