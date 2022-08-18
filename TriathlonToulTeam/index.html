@@ -14,7 +14,7 @@
 <body>
     <div id="Header">
         <div id="Logo">
-            <img src="TTT.png">
+            <img src="TTT.PNG">
         </div>
 
         <div id="Title">
@@ -87,17 +87,15 @@
         <div id="Transition-text">
             <p>Une des caractéristiques principales du triathlon tient dans l’obligation d'enchaînement de ces trois
                 composantes au cours de transitions qui font partie intégrante du temps global comptabilisé aux
-                concurrents.
-                Cette spécificité s'évoque dans les milieux spécialisés comme une « 4e discipline » propre à ce sport et
-                fait parfois l'objet d'entraînements dédiés. Ces transitions imposent aux concurrents d'effectuer des
-                changements de disciplines et de matériels rapides entre deux épreuves. Les compétiteurs doivent ainsi
+                participants.
+                Ces transitions imposent aux athlètes d'effectuer des
+                changements de disciplines et de matériels entre deux épreuves. Les compétiteurs doivent ainsi
                 enlever le plus rapidement possible leur combinaison de natation à la sortie de l'eau et enfiler leur
                 casque
                 (obligatoire) avant de sauter — au sens propre le plus souvent — sur le vélo. Ils doivent de même en
                 descendre de manière efficace, une fois la partie cycliste achevée et enfiler le plus rapidement
                 possible
-                leurs chaussures de course à pied. La rapidité à effectuer les deux transitions peut s'avérer
-                déterminante sur des triathlons courts</p>
+                leurs chaussures de course à pied.</p>
         </div>
         <img id="Photo-Transition" src="christopher-eden-ov0caEZKBsY-unsplash.jpg">
     </div>
@@ -119,7 +117,7 @@
     }
 
     #trait_dessus {
-        border-top: 2px solid #000;
+        border-top: 2px solid yellow;
         width: 100%;
 
     }
@@ -204,8 +202,12 @@
     #Natation {
         display: flex;
         flex: 1;
-        background-color: yellow;
-        align-items: flex-start;
+        background-color: black;
+        align-items: stretch;
+    }
+
+    #Natation-text{
+        color: yellow
     }
 
     #Photo-cyclisme {
@@ -218,8 +220,12 @@
     #Cyclisme {
         display: flex;
         flex: 1;
-        background-color: yellow;
-        align-items: flex-start;
+        background-color: black;
+        align-content: stretch;
+    }
+
+    #Cyclisme-text{
+        color: yellow
     }
 
     #Photo-Cap {
@@ -232,8 +238,14 @@
     #Cap {
         display: flex;
         flex: 1;
-        background-color: yellow;
-        align-items: flex-start;
+        background-color: black;
+        align-content: stretch;
+    }
+
+    #Cap-text{
+        display: flex;
+        color: yellow;
+        align-items: center;
     }
 
     #Photo-Transition {
@@ -243,10 +255,13 @@
         border-radius: 20px;
     }
 
+    #Transition-text{
+        color: yellow;
+    }
     #Transition {
         display: flex;
         flex: 1;
-        background-color: yellow;
+        background-color: black;
         align-items: flex-start;
     }
 
@@ -262,12 +277,12 @@
 
     }
     h3{
-        background-color: yellow;
         font-family: 'Rubik Dirt', cursive;  
-        border-bottom: .1px solid black;
+        border-bottom: .1px solid yellow;
+        color: yellow;
     }
     #contacts {
-        background-color: yellow;
+        background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -282,6 +297,7 @@
         padding: 10px;
         font-family: 'Rubik Dirt', cursive;
         cursor: pointer;
+        color: yellow
     }
 
     #Contact {
