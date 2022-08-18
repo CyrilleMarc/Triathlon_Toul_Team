@@ -72,6 +72,11 @@ try {
         background-size: cover;
     }
 
+    .membres{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
     #Logo {
         display: flex;
         padding: 15px;
@@ -118,7 +123,6 @@ try {
     #membre {
         display: flex;
         flex-direction: column;
-        flex: 2;
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
         color: white;
