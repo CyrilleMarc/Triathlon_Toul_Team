@@ -18,11 +18,11 @@
 </header>
 
 <body>
-    <div class="message">
-        <div id="message">
+    <div class="membres">
+        <div id="membre">
             <form method="post" action="index.php">
                 <h3>Nom athlète</h3>
-                <input type="text" name="message" id="message"><br>
+                <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
                 <button type="submit" value="envoyer">Valider</button>
@@ -36,7 +36,7 @@
 try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_POST['Nom']) && isset($_POST['Mdp'])) {
-        $req = $bdd->prepare('INSERT INTO membres (Nom, Mdp) VALUES(:Nom, :Mdp)');
+        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
         $req->execute(array(
             'Nom' => $_POST['Nom'],
             'Mdp' => $_POST['Mdp']
