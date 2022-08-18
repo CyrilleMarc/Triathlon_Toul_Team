@@ -63,15 +63,27 @@ try {
 
     #Logo {
         display: flex;
-        flex: 1;
         padding: 15px;
+       
     }
 
+    #logo img{
+        border-radius: 10px;
+        width: 200px;
+        background-color: transparent;
+    }
+
+    h3{
+        color
+    }
     button {
         padding: 10px;
         border-radius: 10px;
         font-size: 15px;
         cursor: pointer;
+        color: yellow;
+        background-color: black;
+        font-family: 'Rubik Distressed', cursive;
     }
 
     button:hover {
@@ -102,14 +114,8 @@ try {
 
     }
 
-    button {
-        color: yellow;
-        background-color: white;
-        font-family: 'Rubik Distressed', cursive;
-    }
-
     input{
-        width: 100%;
+        width: 150%;
     }
 
     #formulaire{
