@@ -14,15 +14,14 @@
         <div id="Logo">
             <img id="image" src="TTT.PNG">
         </div>
-
         <div id="Title">
             <h1>Connexion</h1>
         </div>
         <div>
         <a href ="index.php"><button>Accueil</button></a>;
-
+        </div>
+    </div>
 </header>
-
 <body>
     <div class="membres">
         <div id="membre">
