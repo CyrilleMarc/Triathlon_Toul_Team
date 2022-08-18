@@ -86,6 +86,7 @@ try {
 
     button {
         padding: 10px;
+        margin: 10px;
         border-radius: 10px;
         font-size: 15px;
         cursor: pointer;
