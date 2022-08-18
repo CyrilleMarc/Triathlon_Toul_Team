@@ -64,13 +64,8 @@ try {
     button {
         padding: 10px;
         border-radius: 10px;
-        /* font-family: 'Mouse Memoirs', sans-serif;
-        letter-spacing: .1em; */
         font-size: 15px;
-        /* color: white; */
-        /* background-color: #DFBB9D; */
         cursor: pointer;
-        /* text-shadow: 0.1em 0.1em 0.2em black; */
     }
 
     button:hover {
@@ -93,15 +88,17 @@ try {
     #membre {
         display: flex;
         flex-direction: column;
+        flex: 2;
         align-items: center;
         font-family: 'Rubik Distressed', cursive;
-        padding: 60px;
+        color: white;
+        padding: 90px;
 
     }
 
     button {
         color: yellow;
-        background-color: black;
+        background-color: white;
         font-family: 'Rubik Distressed', cursive;
     }
 
