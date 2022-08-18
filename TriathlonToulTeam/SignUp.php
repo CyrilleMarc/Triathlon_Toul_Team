@@ -123,10 +123,9 @@ try {
     #membre {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         font-family: 'Rubik Distressed', cursive;
         color: white;
-        padding: 90px;
 
     }
 
