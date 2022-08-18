@@ -117,7 +117,7 @@ try {
     }
 
     input{
-        width: 100%;
+        width: 80%;
     }
 
     #formulaire{
@@ -127,6 +127,9 @@ try {
         justify-content: space-between;
         background-color: yellow;
         color: black;
+        width: 30%;
+        height: 15%;
+        border-radius: 20px;;
     }
 </style>
 
