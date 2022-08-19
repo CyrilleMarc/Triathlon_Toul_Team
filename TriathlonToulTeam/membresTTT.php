@@ -32,8 +32,8 @@ try {
         <div>
             <table>
                 <?php foreach ($Athletes as $Athlete) : ?>
-                    <td><?php echo '"' . $Athlete['Nom'] . '"'; ?></td>
-                    <td><?php echo "-" . $Athlete['Email'] . "-"; ?></td>
+                    <td><?php echo $Athlete['Nom']; ?></td>
+                    <td><?php echo $Athlete['Email'] . "<br/>" ?></td>
                 <?php endforeach; ?>
             </table>
         </div>
