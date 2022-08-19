@@ -45,7 +45,7 @@
 </html>
 <?php
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    if (isset($_POST['envoyer']) && !empty($_POST['Nom']) && !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
+    if (!empty($_POST['Nom']) && !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
         $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, :Email)');
         $req->execute(array(
             'Nom' => $_POST['Nom'],
