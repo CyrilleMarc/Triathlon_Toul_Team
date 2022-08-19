@@ -36,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <?php echo $erreur; ?>
+                        <div id="erreur"><?php echo $erreur; ?></div>;
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -138,6 +138,11 @@
         width: 30%;
         height: 20%;
         border-radius: 20px;
+    }
+
+    #erreur{
+        color: black;
+        font-size: 100px;
     }
 
     @media only screen and (max-width: 1500px) {
