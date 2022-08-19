@@ -32,8 +32,8 @@
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Mot de passe</h3>
                         <input type="text" name="Mdp" id="Mdp"><br>
-                        <script type='text/javascript'>print_r('$erreur');</script>
-                        <button type="submit" value="">Valider</button>
+                        <?php echo $erreur; ?>
+                        <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
     </div>
