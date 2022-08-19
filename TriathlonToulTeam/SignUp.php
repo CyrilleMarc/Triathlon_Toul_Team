@@ -18,8 +18,8 @@
             <h1>Nouveau compte</h1>
         </div>
         <div>
-            <a href="index.php"><button>Accueil</button></a>
             <a href="Login.php"><button>J'ai déjà un compte</button></a>
+            <a href="index.php"><button>Accueil</button></a>
         </div>
     </div>
 </header>
@@ -38,7 +38,6 @@
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                         <button type="submit" value="envoyer">Valider</button>
-                        <a href="Login.php"><button>J'ai déjà un compte</button></a>
             </form>
         </div>
     </div>
