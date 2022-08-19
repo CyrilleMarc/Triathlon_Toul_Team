@@ -137,7 +137,7 @@ try {
     @media only screen and (max-width: 1100px) {
 
         #formulaire {
-            width: 100%;
+            width: 20em;
         }
     }
 
@@ -147,7 +147,7 @@ try {
         }
 
         #formulaire {
-            width: 100%;
+            width: 20em;
         }
     }
 </style>
