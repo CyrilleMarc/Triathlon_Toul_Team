@@ -30,12 +30,12 @@ try {
 <body>
     <div id="content">
         <div>
-            <table>
+            <tr>
                 <?php foreach ($Athletes as $Athlete) : ?>
                     <td><?php echo $Athlete['Nom']; ?></td>
-                    <td><?php echo $Athlete['Email'] . "<br/>" ?></td>
+                    <td><?php echo $Athlete['Email']?></td><br />
                 <?php endforeach; ?>
-            </table>
+            </tr>
         </div>
     </div>
 </body>
