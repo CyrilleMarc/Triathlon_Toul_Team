@@ -19,6 +19,7 @@
         </div>
         <div>
             <a href="index.php"><button>Accueil</button></a>
+            <a href="Login.php"><button>J'ai déjà un compte</button></a>
         </div>
     </div>
 </header>
@@ -36,9 +37,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
-                        <div id="trait_dessus"></div>
                         <a href="Login.php"><button>J'ai déjà un compte</button></a>
             </form>
         </div>

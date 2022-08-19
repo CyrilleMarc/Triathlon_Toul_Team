@@ -18,7 +18,8 @@
             <h1>Connexion</h1>
         </div>
         <div>
-            <a href="index.php"><button>Accueil</button></a>
+            <a href="./index.php"><button>Accueil</button></a>
+            <a href="./SignUp.php"><button>Créer un compte</button></a>
         </div>
     </div>
 </header>
@@ -35,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
-                        <a href="./SignUp.php"><button type="submit">Créer un compte</button></a>
+                        <a href="./SignUp.php"><button>Créer un compte</button></a>
             </form>
         </div>
     </div>
