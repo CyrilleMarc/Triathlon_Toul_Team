@@ -52,7 +52,7 @@
         </div>
     </body>
     <div id="content">
-        <div>
+        <div id="tableau">
             <table>
                 <caption>Liste des membres</caption>
                 <tr>
@@ -168,6 +168,12 @@
         #Navigation {flex-direction: column;}
         table{max-width: 90%;}
 
+}
+
+@media only screen and (max-width: 640px) {
+    #tableau{
+        max-width: 80%;
+    }
 }
 
 </style>
