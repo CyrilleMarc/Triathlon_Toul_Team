@@ -38,7 +38,8 @@
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                         <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
-                        <a href="./Login.php"><button type="submit">J'ai déjà un compte</button></a>
+                        <div id="trait_dessus"></div>
+                        <a href="Login.php"><button>J'ai déjà un compte</button></a>
             </form>
         </div>
     </div>
@@ -69,6 +70,11 @@
         background-size: cover;
     }
 
+    #trait_dessus {
+        border-top: 1px solid black;
+        width: 100%;
+
+    }
     #Logo {
         display: flex;
         padding: 15px;
