@@ -35,7 +35,7 @@
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                         <button type="submit" value="envoyer">Valider</button>
-                        <a href="Login.php"><button>Se connecter</button></a>
+                        <a href="./Login.php"><button>Se connecter</button></a>
             </form>
         </div>
     </div>
