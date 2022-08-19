@@ -23,20 +23,20 @@
 
         <div id="Navigation">
             <a href="SignUp.php">
-                <li>Créer un compte</li>
+                <li>S'enregistrer</li>
             </a>
             <a href="Login.php">
                 <li>Se connecter</li>
             </a>
             <a href="membresTTT.php">
-                <li>Les membres</li>
+                <li>Athlètes TTT</li>
             </a>
             <a href="https://www.t2area.com/clubs/1-fftri-federation-francaise-de-triathlon/533-triathlon-toul-team.html#:~:text=Le%20club%20de%20Triathlon%20TRIATHLON,FFTRI%20%2D%20F%C3%A9d%C3%A9ration%20Fran%C3%A7aise%20de%20Triathlon."
                 target="blank">
-                <li> Résultats et courses</li>
+                <li> Résultats</li>
             </a>
             <a href="https://espacetri.fftri.com/users/license/account-registration#" target="blank">
-                <li>Prendre une licence</li>
+                <li>Ma licence</li>
             </a>
         </div>
     </div>
@@ -333,8 +333,9 @@
 
         #presentation{padding-top: 70px;}
 
-        #Header {flex-direction: column; 
-                 padding: 10px;}
+        #Header {padding: 10px;}
+        img{ width: 8em; height: 5em;}
+        li{width: 100%;}
 
         #Natation{ flex-direction: column; align-items: center; padding : 5px;}
         #Photo-natation { width: 80%}
