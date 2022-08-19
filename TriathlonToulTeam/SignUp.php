@@ -59,7 +59,22 @@
         'Mdp' => $_POST['Mdp']
     ));
     $req->closeCursor();
-?>
+
+    $req = $bdd->prepare('SELECT * FROM membres WHERE Pseudo = :Pseudo');
+    $req->execute(array(
+        'Pseudo' => $_POST['Pseudo']
+    ));
+    $donnees = $req->fetch();
+    $req->closeCursor();
+    if ($donnees['Pseudo'] == $_POST['Pseudo']) {
+        echo '<script>alert("Pseudo déjà utilisé")</script>';
+    }
+    else {
+        echo '<script>alert("Compte créé")</script>';
+    }
+
+
+
     // if (!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Pseudo']) && !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
     //     $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Mdp, Email) VALUES(:Nom, :Prenom, :Pseudo, :Mdp, :Email)');
     //     $req->execute(array(
@@ -72,9 +87,6 @@
     //     header('Location: Login.php');
     // }
        
-    else{
-        $erreur = "Veuillez remplir correctement tous les champs SVP...";
-    }
 ?>
 <style>
     body {
