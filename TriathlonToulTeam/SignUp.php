@@ -28,6 +28,7 @@
         <div id="membre">
             <form id="formulaire" method="post" action="SignUp.php">
                 <h2>Créer un Compte<h2>
+                        <div id="erreur"><?php echo $erreur; ?></div>
                         <h3>Pseudo</h3>
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Email</h3>
@@ -36,7 +37,6 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <div id="erreur"><?php echo $erreur; ?></div>;
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -59,6 +59,7 @@
     else{
         $erreur = "Veuillez remplir correctement tous les champs SVP...";
     }
+    $erreur = "je suis ici";
 ?>
 <style>
     body {
