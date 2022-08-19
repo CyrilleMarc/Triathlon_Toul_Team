@@ -36,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <span $affiche></span>
+                        <?php echo $affiche ?>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -56,7 +56,7 @@ try {
             'Mdp' => $_POST['Mdp'],
             'Email' => $_POST['Email'],
         ));
-        echo " Bienvenue sur le site des TTT !";
+        $affiche = " Bienvenue sur le site des TTT !";
     }
 
 } catch (Exception $e) {
