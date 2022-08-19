@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<body>
     <div id="Header">
         <div id="Logo">
             <img src="TTT.PNG">
