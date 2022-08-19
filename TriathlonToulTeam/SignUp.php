@@ -50,36 +50,8 @@
 </html>
 <?php
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Email, Mdp) VALUES(:Nom, :Prenom, :Pseudo, :Email, :Mdp)');
-    $req->execute(array(
-        'Nom' => $_POST['Nom'],
-        'Prenom' => $_POST['Prenom'],
-        'Pseudo' => $_POST['Pseudo'],
-        'Email' => $_POST['Email'],
-        'Mdp' => $_POST['Mdp']
-    ));
-    $req->closeCursor();
-    
-    $req = $bdd->prepare('SELECT * FROM membres WHERE Pseudo = :Pseudo');
-    $req->execute(array(
-        'Pseudo' => $_POST['Pseudo']
-    ));
-    $donnees = $req->fetch();
-    $req->closeCursor();
-    $_SESSION['Pseudo'] = $donnees['Pseudo'];
-    $_SESSION['Email'] = $donnees['Email'];
-    $_SESSION['Mdp'] = $donnees['Mdp'];
-    $_SESSION['Nom'] = $donnees['Nom'];
-    $_SESSION['Prenom'] = $donnees['Prenom'];
-    $_SESSION['Id'] = $donnees['Id'];
-    $_SESSION['Admin'] = $donnees['Admin'];
-    $_SESSION['Date_inscription'] = $donnees['Date_inscription'];
-    $_SESSION['Date_derniere_connexion'] = $donnees['Date_derniere_connexion'];
-    $_SESSION['Nombre_connexion'] = $donnees['Nombre_connexion'];
-
-?>
-<!-- if (!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Pseudo']) &&  !empty($_POST['Email']) && !empty($_POST['Mdp'])) { -->
-  <!-- $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Mdp, Email) VALUES(:Nom, :Prenom, :Pseudo, :Mdp, :Email)');
+if (!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Pseudo']) &&  !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
+  $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Mdp, Email) VALUES(:Nom, :Prenom, :Pseudo, :Mdp, :Email)');
         $req->execute(array(
             'Nom' => $_POST['Nom'],
             'Prenom' => $_POST['Prenom'],
@@ -91,8 +63,9 @@
     }
        
     else{
-        $erreur = "Veuillez remplir correctement tous les champs SVP...";
-    } -->
+         echo "Veuillez remplir correctement tous les champs SVP...";
+    }
+?>
 <style>
     body {
         margin: 0%;
