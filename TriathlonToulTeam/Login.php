@@ -35,7 +35,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
-                        <a href="SignUp.php"><button type="submit">Créer un compte</button></a>
+                        <a href="./SignUp.php"><button type="submit">Créer un compte</button></a>
             </form>
         </div>
     </div>
