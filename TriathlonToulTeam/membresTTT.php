@@ -56,12 +56,13 @@
             <table>
                 <caption>Liste des membres</caption>
                 <tr>
-                <th>Nom</th>
-                <th>Email</th>
-                    <?php foreach ($Athletes as $Athlete) : ?>
-                        <td><?php echo $Athlete['Nom']; ?></td>
-                        <td><?php echo $Athlete['Email'] ?></td><br />
-                    <?php endforeach; ?>
+                    <th>Nom</th>
+                    <th>Email</th>
+                </tr>
+                <?php foreach ($Athletes as $Athlete) : ?>
+                    <td><?php echo $Athlete['Nom']; ?></td>
+                    <td><?php echo $Athlete['Email'] ?></td><br />
+                <?php endforeach; ?>
                 </tr>
             </table>
         </div>
@@ -70,13 +71,12 @@
 
 </html>
 <style>
-
-    *{
+    * {
         margin: 0;
         padding: 0;
     }
 
-    table{
+    table {
         border-collapse: collapse;
         width: 100%;
         color: #588c7e;
@@ -84,11 +84,13 @@
         font-size: 25px;
         text-align: center;
     }
-    th{
+
+    th {
         background-color: #588c7e;
         color: white;
     }
-    td{
+
+    td {
         border-color: 1px solid black;
     }
 
