@@ -36,6 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
+                        <div $affiche></div>;
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -47,16 +48,16 @@
 try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_POST['Nom']) && isset($_POST['Email']) && isset($_POST['Mdp'])) {
-        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, Email)');
+        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, :Email)');
         $req->execute(array(
             'Nom' => $_POST['Nom'],
             'Mdp' => $_POST['Mdp'],
-            'Email' => $_POST['Email']
+            'Email' => $_POST['Email'],
         ));
-        echo 'Enregistrement effectué avec succès';
+        $affiche = 'Enregistrement effectué avec succès';
     }
     else{
-        echo ' Toutes les données doivent être remplies';
+        $affiche =  ' Toutes les données doivent être remplies';
     }
 
 } catch (Exception $e) {
