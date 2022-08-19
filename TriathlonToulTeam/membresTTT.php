@@ -1,15 +1,15 @@
 <!-- <?php
-try {
-    $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    $req = $bdd->prepare('SELECT * FROM membres');
-    $req->execute();
-    $Athletes = $req->fetchAll();
-    $req->closeCursor();
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+        try {
+            $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
+            $req = $bdd->prepare('SELECT * FROM membres');
+            $req->execute();
+            $Athletes = $req->fetchAll();
+            $req->closeCursor();
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
+        }
 
-?> -->
+        ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,57 +18,56 @@ try {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <title>Espace membres</title>
 </head>
 
-<header>
-    <div class="container">
-        <h1>ESPACE MEMBRES TTT</h1>
-    </div>
-</header>
-
 <body>
-<body>
-    <div id="Header">
-        <div id="Logo">
-            <img src="TTT.PNG">
-        </div>
 
-        <div id="Title">
-            <h1>Triathlon Toul Team</h1>
-        </div>
+    <body>
+        <div id="Header">
+            <div id="Logo">
+                <img src="TTT.PNG">
+            </div>
 
-        <div id="Navigation">
-            <a href="SignUp.php">
-                <li>S'enregistrer</li>
-            </a>
-            <a href="Login.php">
-                <li>Se connecter</li>
-            </a>
-            <a href="https://www.t2area.com/clubs/1-fftri-federation-francaise-de-triathlon/533-triathlon-toul-team.html#:~:text=Le%20club%20de%20Triathlon%20TRIATHLON,FFTRI%20%2D%20F%C3%A9d%C3%A9ration%20Fran%C3%A7aise%20de%20Triathlon."
-                target="blank">
-                <li> Résultats</li>
-            </a>
-            <a href="https://espacetri.fftri.com/users/license/account-registration#" target="blank">
-                <li>Ma licence</li>
-            </a>
+            <div id="Title">
+                <h1>Espace membres TTT</h1>
+            </div>
+
+            <div id="Navigation">
+                <a href="SignUp.php">
+                    <li>S'enregistrer</li>
+                </a>
+                <a href="Login.php">
+                    <li>Se connecter</li>
+                </a>
+                <a href="https://www.t2area.com/clubs/1-fftri-federation-francaise-de-triathlon/533-triathlon-toul-team.html#:~:text=Le%20club%20de%20Triathlon%20TRIATHLON,FFTRI%20%2D%20F%C3%A9d%C3%A9ration%20Fran%C3%A7aise%20de%20Triathlon." target="blank">
+                    <li> Résultats</li>
+                </a>
+                <a href="https://espacetri.fftri.com/users/license/account-registration#" target="blank">
+                    <li>Ma licence</li>
+                </a>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
     <div id="content">
         <div>
-            <tr id="tableau">
-                <?php foreach ($Athletes as $Athlete) : ?>
-                    <td><?php echo $Athlete['Nom']; ?></td>
-                    <td><?php echo $Athlete['Email']?></td><br />
-                <?php endforeach; ?>
-            </tr>
+            <table>
+                <tr id="tableau">
+                    <?php foreach ($Athletes as $Athlete) : ?>
+                        <td><?php echo $Athlete['Nom']; ?></td>
+                        <td><?php echo $Athlete['Email'] ?></td><br />
+                    <?php endforeach; ?>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
+
 </html>
 <style>
-    #tableau{
+    #tableau {
         border-color: 1px solid black;
         width: 80%;
         margin: auto;
