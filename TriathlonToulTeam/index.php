@@ -28,12 +28,12 @@
             <a href="Login.php">
                 <li>Se connecter</li>
             </a>
-            <a href="membres.php">
+            <a href="membresTTT.php">
                 <li>Les membres</li>
             </a>
             <a href="https://www.t2area.com/clubs/1-fftri-federation-francaise-de-triathlon/533-triathlon-toul-team.html#:~:text=Le%20club%20de%20Triathlon%20TRIATHLON,FFTRI%20%2D%20F%C3%A9d%C3%A9ration%20Fran%C3%A7aise%20de%20Triathlon."
                 target="blank">
-                <li> Résultats / Compétitions</li>
+                <li> Résultats et courses</li>
             </a>
             <a href="https://espacetri.fftri.com/users/license/account-registration#" target="blank">
                 <li>Prendre une licence</li>

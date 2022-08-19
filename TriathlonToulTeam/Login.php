@@ -26,6 +26,7 @@
 <body>
     <div class="membres">
         <div id="membre">
+                <div id="erreur"><?php echo $erreur; ?></div>
             <form id="formulaire" method="get" action="Login.php">
                 <h2>Se connecter<h2>
                         <h3>Pseudo</h3>
@@ -151,6 +152,11 @@
         width: 30%;
         height: 20%;
         border-radius: 20px;
+    }
+
+    #erreur {
+        color: red;
+        font-size: 20px;
     }
 
     @media only screen and (max-width: 1500px) {
