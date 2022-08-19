@@ -140,7 +140,7 @@ try {
     @media only screen and (max-width: 1100px) {
 
         #formulaire {
-            width: 130%;
+            width: 100%;
         }
     }
 
@@ -150,12 +150,7 @@ try {
         }
 
         #formulaire {
-            width: 130%;
-        }
-
-        #Header {
-            flex-direction: column;
-            padding: 10px;
+            width: 100%;
         }
     }
 </style>
