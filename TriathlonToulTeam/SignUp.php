@@ -36,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <div $affiche></div>;
+                        <span $affiche></span>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -53,8 +53,10 @@ try {
             'Nom' => $_POST['Nom'],
             'Mdp' => $_POST['Mdp'],
             'Email' => $_POST['Email'],
-        ));
-        $affiche = 'Enregistrement effectué avec succès';
+        ),
+            $affiche = 'Enregistrement effectué avec succès'
+        );
+        
     }
     else{
         $affiche =  ' Toutes les données doivent être remplies';
