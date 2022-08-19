@@ -28,7 +28,6 @@
         <div id="membre">
             <form id="formulaire" method="post" action="SignUp.php">
                 <h2>Créer un Compte<h2>
-                        <div id="erreur"><?php echo $erreur; ?></div>
                         <h3>Pseudo</h3>
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Email</h3>
@@ -45,7 +44,6 @@
 
 </html>
 <?php
-    $erreur = "Enregistrement réussi, bienvenue chez les TTT...";
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_POST['envoyer']) && !empty($_POST['Nom']) && !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
         $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, :Email)');
@@ -59,7 +57,6 @@
     else{
         $erreur = "Veuillez remplir correctement tous les champs SVP...";
     }
-    $erreur = "je suis ici";
 ?>
 <style>
     body {
