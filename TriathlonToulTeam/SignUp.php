@@ -140,7 +140,7 @@ try {
     @media only screen and (max-width: 1100px) {
 
         #formulaire {
-            width: 70%;
+            width: 130%;
 
         }
     }
