@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    Bienvenue <?php echo $_SESSION['user']['username']; ?> !
+    Bienvenue <?php echo $_SESSION['Nom']; ?> !
     <a href="logout.php">Se déconnecter</a>
-    
+
 </body>
 </html>

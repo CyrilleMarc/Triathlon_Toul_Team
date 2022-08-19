@@ -38,6 +38,7 @@
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                         <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
+                        <a href="Login.php"><button type="submit">J'ai déjà un compte</button></a>
             </form>
         </div>
     </div>
@@ -53,7 +54,7 @@
             'Mdp' => $_POST['Mdp'],
             'Email' => $_POST['Email'],
         ));
-            $erreur = "Enregistrement réussi, bienvenue chez les TTT...";
+        header('Location: Login.php');
     }
        
     else{

@@ -35,6 +35,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
+                        <a href="SignUp.php"><button type="submit">Créer un compte</button></a>
             </form>
         </div>
     </div>
@@ -64,7 +65,8 @@
         }
         else{
             header('Location: Login.php');
-            echo "Mauvais identifiants, merci de vous reconnecter ou de créer un compte";
+            
+        
         }
     }
 
