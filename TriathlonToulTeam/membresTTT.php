@@ -57,12 +57,14 @@
                 <caption>Liste des membres</caption>
                 <tr>
                     <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Pseudo</th>
                     <th>Email</th>
                 </tr>
                 <?php foreach ($Athletes as $Athlete) : ?>
                     <tr>
                         <td><?php echo $Athlete['Nom']; ?></td>
-                        <td><?php echo $Athlete['Prenomom']; ?></td>
+                        <td><?php echo $Athlete['Prenom']; ?></td>
                         <td><?php echo $Athlete['Pseudo']; ?></td>
                         <td><?php echo $Athlete['Email']; ?></td>
                     </tr>
@@ -100,6 +102,10 @@
         border: 1px solid black;
     }
 
+    h1 {
+        font-family: 'Rubik Distressed', cursive;
+        font-size: 3em;
+    }
     #Header {
         display: flex;
         justify-content: space-between;
