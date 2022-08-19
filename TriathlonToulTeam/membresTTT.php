@@ -59,10 +59,11 @@
                     <th>Nom</th>
                     <th>Email</th>
                 </tr>
-                <tr>
                 <?php foreach ($Athletes as $Athlete) : ?>
-                    <td><?php echo $Athlete['Nom']; ?></td>
-                    <td><?php echo $Athlete['Email'] ?></td><br />
+                    <tr>
+                        <td><?php echo $Athlete['Nom']; ?></td>
+                        <td><?php echo $Athlete['Email']; ?></td>
+                    </tr>
                 <?php endforeach; ?>
                 </tr>
             </table>
