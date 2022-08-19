@@ -58,20 +58,17 @@
         'Email' => $_POST['Email'],
         'Mdp' => $_POST['Mdp']
     ));
-    $req->closeCursor();
-
-    $req = $bdd->prepare('SELECT * FROM membres WHERE Pseudo = :Pseudo');
-    $req->execute(array(
-        'Pseudo' => $_POST['Pseudo']
-    ));
-    $donnees = $req->fetch();
-    $req->closeCursor();
     if ($donnees['Pseudo'] == $_POST['Pseudo']) {
         echo '<script>alert("Pseudo déjà utilisé")</script>';
     }
     else {
         echo '<script>alert("Compte créé")</script>';
     }
+    $req->closeCursor();
+
+    
+
+   
 
 
 
