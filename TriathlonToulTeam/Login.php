@@ -60,11 +60,11 @@
             session_start();
             $_SESSION['Nom'] = $Nom;
             $_SESSION['Mdp'] = $Mdp;
-            header('Location: index.php');
+            header('Location: EspaceMembre.php');
         }
         else{
-            $erreur =  "Mauvais identifiants";
-
+            header('Location: Login.php');
+            echo "Mauvais identifiants, merci de vous reconnecter ou de créer un compte";
         }
     }
 
