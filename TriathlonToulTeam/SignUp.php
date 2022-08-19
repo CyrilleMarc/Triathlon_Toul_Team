@@ -18,23 +18,24 @@
             <h1>Nouveau compte</h1>
         </div>
         <div>
-        <a href ="index.php"><button>Accueil</button></a>;
+            <a href="index.php"><button>Accueil</button></a>
         </div>
     </div>
 </header>
+
 <body>
     <div class="membres">
         <div id="membre">
             <form id="formulaire" method="post" action="index.php">
                 <h2>Créer un Compte<h2>
-                <h3>Pseudo</h3>
-                <input type="text" name="Nom" id="Nom"><br>
-                <h3>Mot de passe</h3>
-                <input type="text" name="Mdp" id="Mdp"><br>
-                <h3>Confirmation du mot de passe</h3>
-                <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                <button type="submit" value="envoyer">Valider</button>
-                <a href ="Login.php"><button>Se connecter</button></a>
+                        <h3>Pseudo</h3>
+                        <input type="text" name="Nom" id="Nom"><br>
+                        <h3>Mot de passe</h3>
+                        <input type="text" name="Mdp" id="Mdp"><br>
+                        <h3>Confirmation du mot de passe</h3>
+                        <input type="text" name="ConfirmationMdp" id="Mdp"><br>
+                        <button type="submit" value="envoyer">Valider</button>
+                        <a href="Login.php"><button>Se connecter</button></a>
             </form>
         </div>
     </div>
@@ -67,10 +68,10 @@ try {
     #Logo {
         display: flex;
         padding: 15px;
-       
+
     }
 
-    #image{
+    #image {
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -91,14 +92,15 @@ try {
         opacity: 0.7;
     }
 
-    h1{
+    h1 {
         font-family: 'Rubik Distressed', cursive;
         font-size: 3em;
     }
 
-    h2{
+    h2 {
         font-size: 25px;
     }
+
     #Header {
         display: flex;
         justify-content: space-between;
@@ -119,11 +121,11 @@ try {
 
     }
 
-    input{
+    input {
         width: 80%;
     }
 
-    #formulaire{
+    #formulaire {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -137,16 +139,23 @@ try {
 
     @media only screen and (max-width: 1100px) {
 
-        #formulaire{
-            width: auto;
+        #formulaire {
+            width: 70%;
 
         }
     }
 
     @media only screen and (max-width: 700px) {
-        h1{display:none};
-        #Header {flex-direction: column; 
-                 padding: 10px;}
+        h1 {
+            display: none
+        }
+
+        ;
+
+        #Header {
+            flex-direction: column;
+            padding: 10px;
+        }
     }
 </style>
 

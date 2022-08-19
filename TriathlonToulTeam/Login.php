@@ -18,21 +18,22 @@
             <h1>Connexion</h1>
         </div>
         <div>
-        <a href ="index.php"><button>Accueil</button></a>;
+            <a href="index.php"><button>Accueil</button></a>
         </div>
     </div>
 </header>
+
 <body>
     <div class="membres">
         <div id="membre">
             <form id="formulaire" method="get" action="Login.php">
                 <h2>Se connecter<h2>
-                <h3>Pseudo</h3>
-                <input type="text" name="Nom" id="Nom"><br>
-                <h3>Mot de passe</h3>
-                <input type="text" name="Mdp" id="Mdp"><br>
-                <button type="submit" value="">Valider</button>
-                <a href ="SignUp.php"><button>Créer un compte</button></a>
+                        <h3>Pseudo</h3>
+                        <input type="text" name="Nom" id="Nom"><br>
+                        <h3>Mot de passe</h3>
+                        <input type="text" name="Mdp" id="Mdp"><br>
+                        <button type="submit" value="">Valider</button>
+                        <a href="SignUp.php"><button>Créer un compte</button></a>
             </form>
         </div>
     </div>
@@ -44,8 +45,7 @@ try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_GET['Nom']) && isset($_GET['Mdp'])) {
         $req = $bdd->prepare('SELECT * INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
-        $req->execute(array(
-        )); 
+        $req->execute(array());
         echo 'Enregistrement effectué avec succès';
     }
 } catch (Exception $e) {
@@ -64,10 +64,10 @@ try {
     #Logo {
         display: flex;
         padding: 15px;
-       
+
     }
 
-    #image{
+    #image {
         border-radius: 10px;
         width: 200px;
         background-color: transparent;
@@ -88,14 +88,15 @@ try {
         opacity: 0.7;
     }
 
-    h1{
+    h1 {
         font-family: 'Rubik Distressed', cursive;
         font-size: 3em;
     }
 
-    h2{
+    h2 {
         font-size: 25px;
     }
+
     #Header {
         display: flex;
         justify-content: space-between;
@@ -113,15 +114,15 @@ try {
         font-family: 'Rubik Distressed', cursive;
         color: white;
         padding: 120px;
-    
+
 
     }
 
-    input{
+    input {
         width: 80%;
     }
 
-    #formulaire{
+    #formulaire {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -131,6 +132,27 @@ try {
         width: 30%;
         height: 20%;
         border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+
+        #formulaire {
+            width: 70%;
+
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        h1 {
+            display: none
+        }
+
+        ;
+
+        #Header {
+            flex-direction: column;
+            padding: 10px;
+        }
     }
 </style>
 
