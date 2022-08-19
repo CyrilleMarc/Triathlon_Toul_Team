@@ -59,6 +59,7 @@
                     <th>Nom</th>
                     <th>Email</th>
                 </tr>
+                <tr>
                 <?php foreach ($Athletes as $Athlete) : ?>
                     <td><?php echo $Athlete['Nom']; ?></td>
                     <td><?php echo $Athlete['Email'] ?></td><br />
@@ -86,12 +87,13 @@
     }
 
     th {
-        background-color: #588c7e;
+        background-color: yellow;
         color: white;
+        border: 1px solid black;
     }
 
     td {
-        border-color: 1px solid black;
+        border: 1px solid black;
     }
 
     #Header {
