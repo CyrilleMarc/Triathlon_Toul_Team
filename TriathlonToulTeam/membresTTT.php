@@ -166,7 +166,7 @@
 
         h1 {display: none;}
         #Navigation {flex-direction: column;}
-        table{width: auto;}
+        table{max-width: 90%;}
 
 }
 
