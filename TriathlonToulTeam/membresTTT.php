@@ -54,7 +54,10 @@
     <div id="content">
         <div>
             <table>
-                <tr id="tableau">
+                <caption>Liste des membres</caption>
+                <tr>
+                <th>Nom</th>
+                <th>Email</th>
                     <?php foreach ($Athletes as $Athlete) : ?>
                         <td><?php echo $Athlete['Nom']; ?></td>
                         <td><?php echo $Athlete['Email'] ?></td><br />
@@ -67,11 +70,26 @@
 
 </html>
 <style>
-    #tableau {
-        border-color: 1px solid black;
-        width: 80%;
-        margin: auto;
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        color: #588c7e;
+        font-family: monospace;
+        font-size: 25px;
         text-align: center;
+    }
+    th{
+        background-color: #588c7e;
+        color: white;
+    }
+    td{
+        border-color: 1px solid black;
     }
 
     #Header {
