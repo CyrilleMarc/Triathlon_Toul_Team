@@ -74,7 +74,7 @@ try {
     #image {
         border-radius: 10px;
         width: 200px;
-        background-color: transparent;
+        background-color: yellow;
     }
 
     button {
@@ -141,7 +141,6 @@ try {
 
         #formulaire {
             width: 130%;
-
         }
     }
 
@@ -150,7 +149,9 @@ try {
             display: none
         }
 
-        ;
+        #formulaire {
+            width: 130%;
+        }
 
         #Header {
             flex-direction: column;

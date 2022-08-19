@@ -33,7 +33,7 @@
                         <h3>Mot de passe</h3>
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <button type="submit" value="">Valider</button>
-                        <a href="./SignUp.php"><button>Créer un compte</button></a>
+                        <a href="./SignUp.php"><button type="submit">Créer un compte</button></a>
             </form>
         </div>
     </div>
@@ -70,7 +70,7 @@ try {
     #image {
         border-radius: 10px;
         width: 200px;
-        background-color: transparent;
+        background-color: yellow;
     }
 
     button {
@@ -138,7 +138,6 @@ try {
 
         #formulaire {
             width: 130%;
-
         }
     }
 
@@ -147,11 +146,8 @@ try {
             display: none
         }
 
-        ;
-
-        #Header {
-            flex-direction: column;
-            padding: 10px;
+        #formulaire {
+            width: 130%;
         }
     }
 </style>
