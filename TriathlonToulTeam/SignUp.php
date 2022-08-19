@@ -36,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <?php echo $affiche ?>
+                        <div><?php echo $affiche ?></div>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -45,7 +45,6 @@
 
 </html>
 <?php
-try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (!isset($_POST['Nom']) && !isset($_POST['Email']) && !isset($_POST['Mdp'])) {
         echo "Veuillez remplir tous les champs";}
@@ -58,12 +57,8 @@ try {
         ));
         $affiche = " Bienvenue sur le site des TTT !";
     }
-
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
 ?>
-<style>
+<!-- <style>
     body {
         margin: 0%;
         padding: 0;
@@ -159,7 +154,7 @@ try {
             width: 20em;
         }
     }
-</style>
+</style> -->
 
 <body>
 
