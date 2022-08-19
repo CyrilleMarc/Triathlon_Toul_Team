@@ -36,7 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
-                        <?php if(isset($erreur)) echo '<br /><br />' , $erreur; ?>
+                        <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -45,6 +45,7 @@
 
 </html>
 <?php
+    $erreur = "Enregistrement réussi, bienvenue chez les TTT...";
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
     if (isset($_POST['envoyer']) && !empty($_POST['Nom']) && !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
         $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, :Email)');
@@ -59,7 +60,7 @@
         $erreur = "Veuillez remplir correctement tous les champs SVP...";
     }
 ?>
-<!-- <style>
+<style>
     body {
         margin: 0%;
         padding: 0;
@@ -155,7 +156,7 @@
             width: 20em;
         }
     }
-</style> -->
+</style>
 
 <body>
 
