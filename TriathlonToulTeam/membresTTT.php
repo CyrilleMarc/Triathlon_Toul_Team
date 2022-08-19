@@ -82,6 +82,13 @@
         padding: 0;
     }
 
+    body {
+        margin: 0%;
+        padding: 0;
+        background-image: url("orca-QmiCuCxMUeU-unsplash.jpg");
+        background-size: cover;
+    }
+
     table {
         border-collapse: collapse;
         width: 80%;
