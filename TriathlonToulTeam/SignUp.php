@@ -32,7 +32,7 @@
                         <h3>Nom</h3>
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Prénom</h3>
-                        <input type="text" name="Prenom" id="Prenom"><br>
+                        <input type="text" name="Prenom" id="Nom"><br>
                         <h3>Pseudo</h3>
                         <input type="text" name="Pseudo" id="Pseudo"><br>
                         <h3>Email</h3>
@@ -50,19 +50,22 @@
 </html>
 <?php
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Email, Mdp) VALUES(:Nom, :Prenom, :Pseudo, :Email, :Mdp)');
-    $req->execute(array(
-        'Nom' => $_POST['Nom'],
-        'Prenom' => $_POST['Prenom'],
-        'Pseudo' => $_POST['Pseudo'],
-        'Email' => $_POST['Email'],
-        'Mdp' => $_POST['Mdp']
-    ));
-    header('Location: Login.php');
-    $req->closeCursor();
+    if (!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Pseudo']) &&  !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
+        $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Mdp, Email) VALUES(:Nom, :Prenom, :Pseudo, :Mdp, :Email)');
+        $req->execute(array(
+            'Nom' => $_POST['Nom'],
+            'Prenom' => $_POST['Prenom'],
+            'Pseudo' => $_POST['Pseudo'],
+            'Mdp' => $_POST['Mdp'],
+            'Email' => $_POST['Email'],
+        ));
+        header('Location: Login.php');
+    }
+       
+    else{
+        $erreur = "Veuillez remplir correctement tous les champs SVP...";
+    }
 ?>
-
-
 <style>
     body {
         margin: 0%;
