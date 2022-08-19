@@ -56,7 +56,7 @@ try {
             'Mdp' => $_POST['Mdp'],
             'Email' => $_POST['Email'],
         ));
-        echo " Bienvenue sur le site des TTT !"
+        echo " Bienvenue sur le site des TTT !";
     }
 
 } catch (Exception $e) {
