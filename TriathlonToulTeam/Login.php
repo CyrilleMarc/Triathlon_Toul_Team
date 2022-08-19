@@ -60,11 +60,10 @@
         if ($resultat) {
             session_start();
             $_SESSION['Nom'] = $Nom;
-            $_SESSION['Mdp'] = $Mdp;
             header('Location: EspaceMembre.php');
         }
         else{
-            header('Location: Login.php');
+            header('Location: SignUp.php');
             
         
         }
