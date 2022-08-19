@@ -31,6 +31,8 @@
                 <input type="text" name="Nom" id="Nom"><br>
                 <h3>Mot de passe</h3>
                 <input type="text" name="Mdp" id="Mdp"><br>
+                <h3>Confirmation du mot de passe</h3>
+                <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                 <button type="submit" value="envoyer">Valider</button>
                 <a href ="Login.php"><button>Se connecter</button></a>
             </form>
@@ -131,6 +133,20 @@ try {
         width: 30%;
         height: 20%;
         border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+
+        #formulaire{
+            width: auto;
+
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        h1{display:none};
+        #Header {flex-direction: column; 
+                 padding: 10px;}
     }
 </style>
 
