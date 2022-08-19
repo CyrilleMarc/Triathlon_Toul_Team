@@ -46,14 +46,19 @@
 <?php
 try {
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    if (isset($_POST['Nom']) && isset($_POST['Mdp'])) {
-        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
+    if (isset($_POST['Nom']) && isset($_POST['Email']) && isset($_POST['Mdp']) && (['Mdp'] === ['ConfirmationMdp'])) {
+        $req = $bdd->prepare('INSERT INTO membres(Nom, Mdp, Email) VALUES(:Nom, :Mdp, Email)');
         $req->execute(array(
             'Nom' => $_POST['Nom'],
-            'Mdp' => $_POST['Mdp']
+            'Mdp' => $_POST['Mdp'],
+            'Email' => $_POST['Email']
         ));
         echo 'Enregistrement effectué avec succès';
     }
+    else{
+        echo ' Toutes les données doivent être remplies';
+    }
+
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
