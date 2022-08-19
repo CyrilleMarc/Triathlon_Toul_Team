@@ -161,4 +161,13 @@
     li:hover {
         border-bottom: 0.1rem solid black;
     }
+
+    @media only screen and (max-width: 1000px) {
+
+        h1 {display: none;}
+        #Navigation {flex-direction: column;}
+        table{width: auto;}
+
+}
+
 </style>
