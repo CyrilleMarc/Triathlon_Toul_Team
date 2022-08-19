@@ -134,7 +134,7 @@ try {
         border-radius: 20px;
     }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 1500px) {
 
         #formulaire {
             width: 20em;
