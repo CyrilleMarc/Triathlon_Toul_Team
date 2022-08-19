@@ -28,6 +28,7 @@
         <div id="membre">
             <form id="formulaire" method="get" action="Login.php">
                 <h2>Se connecter<h2>
+                    <span>{{ $erreur }}</span>
                         <h3>Pseudo</h3>
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Mot de passe</h3>
@@ -40,18 +41,25 @@
 
 </html>
 <?php
-try {
+    $erreur = "";
+    $Nom = "";
+    $Mdp = "";
     $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-    if (isset($_GET['Nom']) && isset($_GET['Mdp'])) {
-        $req = $bdd->prepare('SELECT * INTO membres(Nom, Mdp) VALUES(:Nom, :Mdp)');
-        $req->execute(array());
-        echo 'Enregistrement effectué avec succès';
+    if (!empty($_GET['Nom']) && !empty($_GET['Mdp'])) {
+        $req = $bdd->prepare('SELECT * FROM membres WHERE Nom = :Nom AND Mdp = :Mdp');
+        $req->execute(array(
+            'Nom' => $_GET['Nom'],
+            'Mdp' => $_GET['Mdp'],
+        ));
+        $resultat = $req->fetch();
+        if ($resultat) {
+            $erreur = "Connexion réussie, bienvenue chez les TTT...";
+        }
+        else{
+            $erreur = "Pseudo ou mot de passe incorrect";
+        }
     }
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
 ?>
-
 <style>
     body {
         margin: 0%;

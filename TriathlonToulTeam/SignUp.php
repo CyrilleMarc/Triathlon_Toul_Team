@@ -36,6 +36,7 @@
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <h3>Confirmation du mot de passe</h3>
                         <input type="text" name="ConfirmationMdp" id="Mdp"><br>
+                        <?php echo $erreur; ?>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -52,8 +53,9 @@
             'Mdp' => $_POST['Mdp'],
             'Email' => $_POST['Email'],
         ));
-        $erreur = "Enregistrement réussi, bienvenue chez les TTT...";
+            $erreur = "Enregistrement réussi, bienvenue chez les TTT...";
     }
+       
     else{
         $erreur = "Veuillez remplir correctement tous les champs SVP...";
     }
