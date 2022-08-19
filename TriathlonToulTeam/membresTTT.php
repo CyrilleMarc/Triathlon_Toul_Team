@@ -107,6 +107,7 @@
 
     td {
         border: 1px solid black;
+        background-color: #FCF3CF ;
     }
 
     h1 {
