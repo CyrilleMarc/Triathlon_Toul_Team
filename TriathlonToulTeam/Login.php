@@ -33,7 +33,6 @@
                         <h3>Mot de passe</h3>
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <button type="submit" value="">Valider</button>
-                        <a href="./SignUp.php"><button type="submit">Créer un compte</button></a>
             </form>
         </div>
     </div>
