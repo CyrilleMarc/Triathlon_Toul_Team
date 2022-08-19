@@ -333,7 +333,7 @@
 
         #presentation{padding-top: 70px;}
 
-        #Header {padding: 10px;}
+        #Header {padding: 10px; justify-content: space-around; align-items: center;}
         img{ width: 8em; height: 5em;}
         li{width: 100%;}
 
