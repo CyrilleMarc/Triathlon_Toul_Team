@@ -36,6 +36,9 @@
             </div>
 
             <div id="Navigation">
+            <a href="index.php">
+                    <li>Accueil</li>
+                </a>
                 <a href="SignUp.php">
                     <li>S'enregistrer</li>
                 </a>
