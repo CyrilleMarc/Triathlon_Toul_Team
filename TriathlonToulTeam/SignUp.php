@@ -26,7 +26,7 @@
 <body>
     <div class="membres">
         <div id="membre">
-            <form id="formulaire" method="post" action="index.php">
+            <form id="formulaire" method="post" action="SignUp.php">
                 <h2>Créer un Compte<h2>
                         <h3>Pseudo</h3>
                         <input type="text" name="Nom" id="Nom"><br>
