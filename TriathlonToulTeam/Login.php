@@ -31,7 +31,7 @@
             <form id="formulaire" method="get" action="Login.php">
                 <h2>Se connecter<h2>
                         <h3>Pseudo</h3>
-                        <input type="text" name="Nom" id="Nom"><br>
+                        <input type="text" name="Pseudo" id="Pseudo"><br>
                         <h3>Mot de passe</h3>
                         <input type="text" name="Mdp" id="Mdp"><br>
                         <?php echo $erreur; ?>

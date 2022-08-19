@@ -62,6 +62,8 @@
                 <?php foreach ($Athletes as $Athlete) : ?>
                     <tr>
                         <td><?php echo $Athlete['Nom']; ?></td>
+                        <td><?php echo $Athlete['Prenomom']; ?></td>
+                        <td><?php echo $Athlete['Pseudo']; ?></td>
                         <td><?php echo $Athlete['Email']; ?></td>
                     </tr>
                 <?php endforeach; ?>
@@ -80,16 +82,17 @@
 
     table {
         border-collapse: collapse;
-        width: 100%;
-        color: #588c7e;
+        width: 80%;
+        color: black;
         font-family: monospace;
         font-size: 25px;
         text-align: center;
+        margin: 20px ;
     }
 
     th {
         background-color: yellow;
-        color: white;
+        color: black;
         border: 1px solid black;
     }
 
