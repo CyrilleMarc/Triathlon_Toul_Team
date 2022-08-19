@@ -28,7 +28,6 @@
         <div id="membre">
             <form id="formulaire" method="get" action="Login.php">
                 <h2>Se connecter<h2>
-                    <span>{{ $erreur }}</span>
                         <h3>Pseudo</h3>
                         <input type="text" name="Nom" id="Nom"><br>
                         <h3>Mot de passe</h3>
@@ -44,21 +43,34 @@
     $erreur = "";
     $Nom = "";
     $Mdp = "";
-    $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
+
     if (!empty($_GET['Nom']) && !empty($_GET['Mdp'])) {
+        $Nom = $_GET['Nom'];
+        $Mdp = $_GET['Mdp'];
+        $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
         $req = $bdd->prepare('SELECT * FROM membres WHERE Nom = :Nom AND Mdp = :Mdp');
         $req->execute(array(
-            'Nom' => $_GET['Nom'],
-            'Mdp' => $_GET['Mdp'],
+            'Nom' => $Nom,
+            'Mdp' => $Mdp,
         ));
         $resultat = $req->fetch();
         if ($resultat) {
-            $erreur = "Connexion réussie, bienvenue chez les TTT...";
+            session_start();
+            $_SESSION['Nom'] = $Nom;
+            $_SESSION['Mdp'] = $Mdp;
+            header('Location: index.php');
         }
         else{
-            $erreur = "Pseudo ou mot de passe incorrect";
+            $erreur =  "Mauvais identifiants";
+            echo "<script type='text/javascript'>alert('$erreur');</script>";
+            
         }
     }
+
+    if (!empty($erreur)) {
+        echo $erreur;
+    }
+
 ?>
 <style>
     body {
