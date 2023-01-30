@@ -15,11 +15,11 @@
             <img id="image" src="TTT.PNG">
         </div>
         <div id="Title">
-            <h1>Connexion</h1>
+            <h1>Nouveau compte</h1>
         </div>
         <div>
-        <a href="./SignUp.php"><button>Créer un compte</button></a>
-            <a href="./index.php"><button>Accueil</button></a>
+            <a href="Login.php"><button>J'ai déjà un compte</button></a>
+            <a href="index.php"><button>Accueil</button></a>
         </div>
     </div>
 </header>
@@ -27,14 +27,20 @@
 <body>
     <div class="membres">
         <div id="membre">
-                <div id="erreur"><?php echo $erreur; ?></div>
-            <form id="formulaire" method="get" action="Login.php">
-                <h2>Se connecter<h2>
+            <form id="formulaire" method="post" action="SignUp.php">
+                <h2>Créer un Compte<h2>
+                        <h3>Nom</h3>
+                        <input type="text" name="Nom" id="Nom"><br>
+                        <h3>Prénom</h3>
+                        <input type="text" name="Prenom" id="Nom"><br>
                         <h3>Pseudo</h3>
                         <input type="text" name="Pseudo" id="Pseudo"><br>
+                        <h3>Email</h3>
+                        <input type="text" name="Email" id="Email"><br>
                         <h3>Mot de passe</h3>
                         <input type="text" name="Mdp" id="Mdp"><br>
-                        <?php echo $erreur; ?>
+                        <h3>Confirmation du mot de passe</h3>
+                        <input type="text" name="ConfirmationMdp" id="Mdp"><br>
                         <button type="submit" value="envoyer">Valider</button>
             </form>
         </div>
@@ -42,38 +48,24 @@
 </body>
 
 </html>
-<?php
-    $erreur = "";
-    $Nom = "";
-    $Mdp = "";
-
-    if (!empty($_GET['Nom']) && !empty($_GET['Mdp'])) {
-        $Nom = $_GET['Nom'];
-        $Mdp = $_GET['Mdp'];
-        $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
-        $req = $bdd->prepare('SELECT * FROM membres WHERE Nom = :Nom AND Mdp = :Mdp');
+<!-- <?php
+    $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_ecb86cfcf145222;charset=utf8', "beceab70a9685f", "134b075f");
+if (!empty($_POST['Nom']) && !empty($_POST['Prenom']) && !empty($_POST['Pseudo']) &&  !empty($_POST['Email']) && !empty($_POST['Mdp'])) {
+  $req = $bdd->prepare('INSERT INTO membres(Nom, Prenom, Pseudo, Mdp, Email) VALUES(:Nom, :Prenom, :Pseudo, :Mdp, :Email)');
         $req->execute(array(
-            'Nom' => $Nom,
-            'Mdp' => $Mdp,
+            'Nom' => $_POST['Nom'],
+            'Prenom' => $_POST['Prenom'],
+            'Pseudo' => $_POST['Pseudo'],
+            'Mdp' => $_POST['Mdp'],
+            'Email' => $_POST['Email'],
         ));
-        $resultat = $req->fetch();
-        if ($resultat) {
-            session_start();
-            $_SESSION['Nom'] = $Nom;
-            header('Location: EspaceMembre.php');
-        }
-        else{
-            header('Location: SignUp.php');
-            
-        
-        }
+        header('Location: Login.php');
     }
-
-    if (!empty($erreur)) {
-        echo $erreur;
+       
+    else{
+         echo "Veuillez remplir correctement tous les champs SVP...";
     }
-
-?>
+?> -->
 <style>
     body {
         margin: 0%;
@@ -82,6 +74,11 @@
         background-size: cover;
     }
 
+    #trait_dessus {
+        border-top: 1px solid black;
+        width: 100%;
+
+    }
     #Logo {
         display: flex;
         padding: 15px;
@@ -136,7 +133,6 @@
         color: white;
         padding: 120px;
 
-
     }
 
     input {
@@ -155,9 +151,9 @@
         border-radius: 20px;
     }
 
-    #erreur {
-        color: red;
-        font-size: 20px;
+    #erreur{
+        color: black;
+        font-size: 100px;
     }
 
     @media only screen and (max-width: 1500px) {
